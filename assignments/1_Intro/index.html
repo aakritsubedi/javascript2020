@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript in 2020</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./../../css/style.css">
+</head>
+<body>
+  <div class="js-banner"></div>
+  <div class="container-fluid mt-5">
+    <h2>Introduction: JavaScript</h2>
+    <p>JavaScript is a lightweight, interpreted programming language. It is designed for creating network-centric applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
+
+    <p>JavaScript was initially created to “make web pages alive”. The programs in this language are called scripts. They can be written right in a web page’s HTML and run automatically as the page loads Scripts are provided and executed as plain text. They don’t need special preparation or compilation to run.</p>
+
+    <p>Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called the JavaScript engine. The browser has an embedded engine sometimes called a “JavaScript virtual machine”. </p>
+
+    <p class="font-weight-bold">Q. How does engine work?</p>
+    <p>Ans: Engines are complicated. But the basics are easy.</p>
+    <ul class="pl-5">
+      <li>The engine (embedded if it’s a browser) reads (“parses”) the script.</li>
+      <li>Then it converts (“compiles”) the script to the machine language.</li>
+      <li>And then the machine code runs, pretty fast.</li>
+    </ul>
+    <p>
+      The engine applies optimizations at each step of the process. It even watches the compiled script as it runs, analyzes the data that flows through it, and further optimizes the machine code based on that knowledge.
+    </p>
+    <p class="font-weight-bold">Q. What make JavaScript unique? </p>
+    <p>Ans: There are at least three great things about JavaScript:</p>
+    <ul class="pl-5">
+      <li>Full integration with HTML/CSS.</li>
+      <li>Simple things are done simply.</li>
+      <li>Support by all major browsers and enabled by default.</li>
+    </ul>
+    <p>JavaScript is the only browser technology that combines these three things. That’s what makes JavaScript unique. That’s why it’s the most widespread tool for creating browser interfaces. That said, JavaScript also allows to create servers, mobile applications, etc.</p>
+    <p class="font-weight-bold">Q. What JS in-browser can do?</p>
+    <p>Ans: Modern JavaScript is a “safe” programming language. It does not provide low-level access to memory or CPU, because it was initially created for browsers which do not require it. JavaScript’s capabilities greatly depend on the environment it’s running in. For instance, Node.js supports functions that allow JavaScript to read/write arbitrary files, perform network requests, etc. </p>
+    <p>In-browser JavaScript can do everything related to webpage manipulation, interaction with the user, and the webserver.</p>
+    <p>For instance, in-browser JavaScript is able to:</p>
+    <ul class="pl-5">
+      <li>Add new HTML to the page, change the existing content, modify styles.</li>
+      <li>React to user actions, run on mouse clicks, pointer movements, key presses.</li>
+      <li>Send requests over the network to remote servers, download and upload files (so-called AJAX and COMET technologies).</li>
+      <li>Get and set cookies, ask questions to the visitor, show messages.</li>
+      <li>Remember the data on the client-side using local storage.</li>
+    </ul>
+    <p class="font-weight-bold">Q. What CAN’T in-browser JavaScript do?</p>
+    <p>Ans: JavaScript’s abilities in the browser are limited for the sake of the user’s safety. The aim is to prevent an evil webpage from accessing private information or harming the user’s data.</p>
+    <hr>
+    <span class="h4">Summary</span>
+    <ul class="pl-5">
+      <li>JavaScript was initially created as a browser-only language, but is now used in many other environments as well.</li>
+      <li>Today, JavaScript has a unique position as the most widely-adopted browser language with full integration with HTML/CSS.</li>
+      <li>There are many languages that get “transpiled” to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.</li>
+    </ul>
+  </div>
+  <div class="footer"></div>
+  <script src="./script.js"></script>
+</body>
+</html> 

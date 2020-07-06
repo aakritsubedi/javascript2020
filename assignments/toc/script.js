@@ -1,6 +1,6 @@
 // List of all table of content 
 const tableOfContent = [
-  { sn: 1, title: 'Introduction to JS', github: 'sn-1', demo: 'sn-1'},
+  { sn: 1, title: 'Introduction to JS', github: '1_Intro', demo: '1_Intro'},
   { sn: 2, title: '...', github: '#', demo: '#'}
 ]
 
