@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.js-banner {
+  background-image: url('../images/jsBanner.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  background-color: #FBD72F;
+  height: 250px;
+  width: 100%;
+}
