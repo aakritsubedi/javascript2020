@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning JavaScript in 2020</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body>
+    <div class="js-banner"></div>
+    <div class="container-fluid mt-5">
+      <h2>Variables in JS</h2>
+      <p>
+        A variable is a “named storage” for data. We can use variables to store
+        goodies, visitors, and other data.
+      </p>
+      <p>
+        To create a variable in JavaScript, use the <code>let</code> or
+        <code>var</code> keyword. The let and var are reserved keywords to
+        declare a variable. A variable must have unique name and assigned value
+        using equal to (=) operator when you declare it or before using it.  we can combine the variable declaration and assignment into a single line:
+      </p>
+      <span class="code-editor" id="variable-syntax"></span>
+      <b>Examples:</b>
+      <span class="code-editor" id="variable-examples"></span>
+      <p>The string is now saved into the memory area associated with the variable. We can access it using the variable name:</p>
+      <span class="code-editor" id="accessing-variable"></span>
+      <p>We can also declare multiple variables in one line:</p>
+      <span class="code-editor" id="multiple-declaration"></span>
+      <b>Note: </b>
+      <p>It is Not Recommended to declare a variable without var/let keyword. It can accidently overwrite an existing global variable.</p>
+      <br>
+      <span class="h5">Examples: </span>
+      <p>We can also change it as many times as we want. When the value is changed, the old data is removed from the variable. </p>
+      <span class="code-editor" id="example1"></span>
+      <p>We can also declare two variables and copy data from one into the other.</p>
+      <span class="code-editor" id="example2"></span>
+      <br>
+      <span class="h4">The old "var"</span>
+      <p>In the very first chapter about variables, we mentioned three ways of variable declaration:</p>
+      <ul class="pl-5">
+        <li>let</li>
+        <li>const</li>
+        <li>var</li>
+      </ul>
+      <p>The var declaration is similar to let. Most of the time we can replace let by var or vice-versa and expect things to work:</p>
+      <span class="code-editor" id="let-var-example"></span>
+      <p>But internally var is a very different beast, that originates from very old times. It’s generally not used in modern scripts.</p>
+      <span class="h5">“var” has no block scope</span>
+      <p>Variables, declared with var, are either function-wide or global. They are visible through blocks.</p>
+      <b>For Example:</b>
+      <span class="code-editor" id="var-scope"></span>
+      <p>As var ignores code blocks, we’ve got a global variable test.</p>
+      <p>If we used let test instead of var test, then the variable would only be visible inside if:</p>
+      <span class="code-editor" id="let-scope"></span>
+      <p>The same thing for loops: var cannot be block- or loop-local:</p>
+      <span class="code-editor" id="loop-scope"></span>
+      <p>If a code block is inside a function, then var becomes a function-level variable:</p>
+      <span class="code-editor" id="function-scope"></span>
+      <span class="h5">“var” tolerates redeclarations</span>
+      <p>If we declare the same variable with let twice in the same scope, that’s an error:</p>
+      <span class="code-editor" id="let-redeclaration"></span>
+      <p>With var, we can redeclare a variable any number of times. If we use var with an already-declared variable, it’s just ignored:</p>
+      <span class="code-editor" id="var-redeclaration"></span>
+      <b>Note: </b>
+      <p>Declarations are hoisted, but assignments are not.</p>
+      <br>
+      <span class="h5">Constant in JS</span>
+      <p>To declare a constant (unchanging) variable, use const instead of let. Variables declared using const are called “constants”. They cannot be reassigned. An attempt to do so would cause an error. </p>
+      <p>Such constants are named using capital letters and underscores.</p>
+      <span class="code-editor" id="constant-example"></span>
+      <hr>
+      <span class="h4">Summary</span>
+      <ul class="pl-4">
+        <li>We can declare variables to store data by using the var, let, or const keywords.</li>
+        <ul class="pl-5">
+          <li>let – is a modern variable declaration.</li>
+          <li>var – is an old-school variable declaration. Normally we don’t use it at all.</li>
+          <li>const – is like let, but the value of the variable can’t be changed.</li>
+        </ul>
+        <li>There are two main differences of var compared to let/const:</li>
+        <ul class="pl-5">
+          <li>var variables have no block scope, they are visible minimum at the function level.</li>
+          <li>var declarations are processed at function start (script start for globals).</li>
+        </ul>
+        <li>Case matters: Variables named apple and AppLE are two different variables. Variables should be named in a way that allows us to easily understand what’s inside them.</li>
+        
+      </ul>
+    </div>
+    <div class="footer"></div>
+    <!-- Custom Script -->
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
