@@ -15,4 +15,10 @@
   background-color: #FBD72F;
   height: 30px;
   width: 100%;
+  margin-top: 25px;
+}
+
+/* code editor */
+.code-editor {
+  margin: 25px 0;
 }

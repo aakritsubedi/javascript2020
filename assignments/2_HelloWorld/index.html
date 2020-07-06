@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning JavaScript in 2020</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./../../css/style.css" />
+  </head>
+  <body>
+    <div class="js-banner"></div>
+    <div class="container-fluid mt-5">
+      <h2>Helloworld in JS</h2>
+      <span class='code-editor' id="hello-world"></span>
+      <br />
+      <p>So first, let’s see how we attach a script to a webpage.</p>
+      <ul class="pl-5">
+        <li>The <code>script</code> tag</li>
+        <p>
+          JavaScript programs can be inserted into any part of an HTML document
+          with the help of the <code>script</code> tag.
+        </p>
+        <span class='code-editor' id="script-tag"></span>
+        <p>
+          The <code>script</code> tag contains JavaScript code which is
+          automatically executed when the browser processes the tag.
+        </p>
+        <li>External scripts</li>
+        <p>
+          If we have a lot of JavaScript code, we can put it into a separate
+          file. Script files are attached to HTML with the src attribute:
+        </p>
+        <span class="code-editor" id="external-script1"></span>
+        <p>
+          Here, /path/to/script.js is an absolute path to the script from the
+          site root. One can also provide a relative path from the current page.
+          For instance, src="script.js" would mean a file "script.js" in the
+          current folder.
+        </p>
+        <p>We can give a full URL as well.</p>
+        <span class='code-editor' id="external-script2"></span>
+        <p>To attach several scripts, use multiple tags:</p>
+        <span class='code-editor' id="multiple-script"></span>
+      </ul>
+      <b>Note:</b>
+      <p>
+        As a rule, only the simplest scripts are put into HTML. More complex
+        ones reside in separate files. The benefit of a separate file is that
+        the browser will download it and store it in its cache. Other pages that
+        reference the same script will take it from the cache instead of
+        downloading it, so the file is actually downloaded only once. That
+        reduces traffic and makes pages faster.
+      </p>
+      <b>If src is set, the script content is ignored.</b>
+      <p>
+        A single <code>script</code> tag can’t have both the src attribute and
+        code inside.
+      </p>
+      <p>This won’t work:</p>
+      <span class='code-editor' id="wont-work"></span>
+      <p>We must choose either an external or a regular <code>script</code> tag. The example above can be split into two scripts to work:</p>
+      <span class='code-editor' id="multiple-working"></span>
+      <hr>
+      <span class="h4">Summary</span>
+      <ul class="pl-5">
+        <li>We can use a <code>script</code> tag to add JavaScript code to a page.</li>
+        <li>The type and language attributes are not required.</li>
+        <li>A script in an external file can be inserted with path provided in src attribute of <code>script</code> tag.</li>
+      </ul>
+    </div>
+    <div class="footer"></div>
+    <!-- Custom Script -->
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
