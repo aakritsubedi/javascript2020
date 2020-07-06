@@ -1,6 +1,7 @@
 // List of all table of content 
 const tableOfContent = [
-  { sn: 1, title: 'Introduction to JS', desc: '...' ,github: '#', demo: '#'}
+  { sn: 1, title: 'Introduction to JS', github: 'sn-1', demo: 'sn-1'},
+  { sn: 2, title: '...', github: '#', demo: '#'}
 ]
 
 let toc = document.getElementById('toc');
@@ -9,7 +10,12 @@ tableOfContent.forEach(content => {
   let tr = document.createElement('tr');
   for (key in content) {
     let td = document.createElement('td');
-    td.innerText = content[key];
+    if(key !== 'github' && key !== 'demo'){
+      td.innerText = content[key];
+    }
+    else {
+      td.innerHTML = key === 'demo' ? `<a href='../${content[key]}'>Demo</a>` : `<a href='https://github.com/aakritsubedi/javascript2020/blob/gh-pages/assignments/${content[key]}' target='_blank'>Code</a>`;
+    }
     tr.appendChild(td);
   }
 
