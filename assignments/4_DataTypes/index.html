@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript in 2020</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./../../css/style.css">
+</head>
+<body>
+  <div class="js-banner"></div>
+  <div class="container-fluid mt-5">
+    <h2>Data types in JS</h2>
+    <p>A value in JavaScript is always of a certain type. For example, a string or a number.</p>
+    <p>There are eight basic data types in JavaScript.</p>
+    <p>Programming languages that allow such things, such as JavaScript, are called “dynamically typed”, meaning that there exist data types, but variables are not bound to any of them. We can put any type in a variable. For example, a variable can at one moment be a string and then store a number. </p>
+    <span class="code-editor" id="dynamically-typed"></span>
+    <ul class="pl-4">
+      <li>String</li>
+      <p>A string in JavaScript must be surrounded by quotes.</p>
+      <span class="code-editor" id="string"></span>
+      <li>Number</li>
+      <p>The number type represents both integer and floating point numbers.</p>
+      <p> Besides regular numbers, there are so-called “special numeric values” which also belong to this data type: Infinity, -Infinity and NaN.</p>
+      <span class="code-editor" id="number"></span>
+      <ul class="pl-5">
+        <li>Infinity represents the mathematical Infinity ∞. It is a special value that’s greater than any number.</li>
+        <code>alert( 1 / 0 ); // Infinity</code>
+        <li>NaN represents a computational error. It is a result of an incorrect or an undefined mathematical operation.</li>
+        <code>alert( "not a number" / 2 ); // NaN, such division is erroneous</code>
+      </ul>
+      <li>BigInt</li>
+      <p>In JavaScript, the “number” type cannot represent integer values larger than (2<sup>53</sup>-1) (that’s 9007199254740991), or less than -(-2<sup>53</sup>-1) for negatives. It’s a technical limitation caused by their internal representation.</p>
+      <p>BigInt type was recently added to the language to represent integers of arbitrary length. A BigInt value is created by appending n to the end of an integer:</p>
+      <span class="code-editor" id="big-int"></span>
+      <li>Boolean</li>
+      <p>The boolean type has only two values: true and false. This type is commonly used to store yes/no values: true means “yes, correct”, and false means “no, incorrect”.</p>
+      <span class="code-editor" id="boolean"></span>
+      <li>The “null” value</li>
+      <p>The special null value does not belong to any of the types. It forms a separate type of its own which contains only the null value.</p>
+      <p>In JavaScript, null is not a “reference to a non-existing object”. It’s just a special value which represents “nothing”, “empty” or “value unknown”. </p>
+      <span class="code-editor" id="null-value"></span>
+      <li>The “undefined” value</li>
+      <p>The special value undefined also stands apart. It makes a type of its own, just like null.</p>
+      <p>The meaning of undefined is “value is not assigned”. If a variable is declared, but not assigned, then its value is undefined. </p>
+      <span class="code-editor" id="undefined-value"></span>
+      <li>Objects and Symbols</li>
+      <p>The object type is special. Objects are used to store collections of data and more complex entities.</p>
+      <p>The symbol type is used to create unique identifiers for objects. We have to mention it here for the sake of completeness, but also postpone the details till we know objects.</p>
+      <span class="code-editor" id="objects"></span>
+      <span class="h5">The typeof operator</span>
+      <p>The typeof operator returns the type of the argument. It’s useful when we want to process values of different types differently or just want to do a quick check. </p>
+      <span>It supports two forms of syntax:</span>
+      <ul class="pl-5">
+        <li>As an operator: <code>typeof x</code></li>
+        <li>As a function: <code>typeof(x)</code></li>
+      </ul>
+      <p>In other words, it works with parentheses or without them. The result is the same.</p>
+      <span class="code-editor" id="typeof"></span>
+    </ul>
+    <hr>
+    <span class="h4">Summary</span>
+    <p>There are 8 basic data types in JavaScript.</p>
+    <ul class="pl-5">
+      <li>number for numbers of any kind: integer or floating-point, integers are limited by ±2<sup>53</sup></li>
+      <li>bigint is for integer numbers of arbitrary length</li>
+      <li>string for strings. A string may have zero or more characters, there’s no separate single-character type</li>
+      <li>boolean for true/false</li>
+      <li>null for unknown values – a standalone type that has a single value null</li>
+      <li>undefined for unassigned values – a standalone type that has a single value undefined</li>
+      <li>object for more complex data structures</li>
+      <li>symbol for unique identifiers</li>
+    </ul>
+    <p>The typeof operator allows us to see which type is stored in a variable. Two forms: <code>typeof x</code>  or <code>typeof(x)</code>.</p>
+  </div>
+  <div class="footer"></div>
+  <script src="./script.js" type="module"></script>
+</body>
+</html>
