@@ -3,7 +3,8 @@ const tableOfContent = [
   { sn: 1, title: 'Introduction', github: '1_Intro', demo: '1_Intro'},
   { sn: 2, title: 'Hello World', github: '2_HelloWorld', demo: '2_HelloWorld'},
   { sn: 3, title: 'Varibales', github: '3_Variables', demo: '3_Variables'},
-  { sn: 4, title: 'DataTypes', github: '4_DataTypes', demo: '4_DataTypes'},
+  { sn: 4, title: 'Data Types', github: '4_DataTypes', demo: '4_DataTypes'},
+  { sn: 5, title: 'Type Conversions', github: '5_TypeConversions', demo: '5_TypeConversions'}
 ]
 
 let toc = document.getElementById('toc');

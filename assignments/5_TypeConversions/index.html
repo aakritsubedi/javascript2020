@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript in 2020</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./../../css/style.css">
+</head>
+<body>
+  <div class="js-banner"></div>
+  <div class="container-fluid mt-5">
+    <h2>Type Conversions</h2>
+    <p>Most of the time, operators and functions automatically convert the values given to them to the right type.</p>
+    <p>For example, alert automatically converts any value to a string to show it. Mathematical operations convert values to numbers.</p>
+    <p>There are also cases when we need to explicitly convert a value to the expected type.</p>
+    <span class="h5">String Conversion</span>
+    <p>String conversion happens when we need the string form of a value. We can call the <code>String(value)</code> function to convert a value to a string.</p>
+    <span class="code-editor" id="string-conversion"></span>
+    <p>String conversion is mostly obvious. A false becomes "false", null becomes "null", etc.</p>
+    <span class="h5">Numeric Conversion</span>
+    <p>Numeric conversion happens in mathematical functions and expressions automatically. For example, when division / is applied to non-numbers.</p>
+    <p>We can use the <code>Number(value)</code> function to explicitly convert a value to a number. If the string is not a valid number, the result of such a conversion is NaN.</p>
+    <span class="code-editor" id="numeric-conversion"></span>
+    <p>Numeric conversion rules:</p>
+    <table class="table table-sm">
+        <tr><th width=15%>Value</th> <th>becomes...</th></tr>
+        <tr><td width=15%>undefined</td> <td>NaN</td></tr>
+        <tr><td width=15%>0</td> <td>null</td></tr>
+        <tr><td width=15%>true and false</td> <td>1 and 0</td></tr>
+        <tr><td width=15%>string</td> <td>	Whitespaces from the start and end are removed. If the remaining string is empty, the result is 0. Otherwise, the number is “read” from the string. An error gives NaN.</td></tr>
+    </table>
+    <span class="code-editor" id="numeric-rules"></span>
+    <p>Note that null and undefined behave differently here: null becomes zero while undefined becomes NaN.</p>
+    <span class="h5">Boolean Conversion</span>
+    <p>Boolean conversion is the simplest one. It happens in logical operations (later we’ll meet condition tests and other similar things) but can also be performed explicitly with a call to <code>Boolean(value)</code>.</p>
+    <p>The conversion rule:</p>
+    <ul class="pl-5">
+      <li>Values that are intuitively “empty”, like 0, an empty string, null, undefined, and NaN, become false</li>
+      <li>Other values become true</li>
+      <li>the string with zero "0" and " " is true</li>
+    </ul>
+    <table class="table table-sm">
+      <tr><th width=25%>Value</th> <th>becomes ...</th></tr>
+      <tr><td width=25%>0, null, undefined, NaN, ""	false</td> <td>false</td></tr>
+      <tr><td width=25%>any other value</td> <td>true</td></tr>
+    </table>
+    <span class="code-editor" id="boolean-conversion"></span>
+    <hr>
+    <span class="h4">Summary</span>
+    <p>The three most widely used type conversions are to string, to number, and to boolean.</p>
+    <ul class="pl-5">
+      <li>String Conversion – Occurs when we output something. Can be performed with String(value). The conversion to string is usually obvious for primitive values.</li>
+      <li>Numeric Conversion – Occurs in math operations. Can be performed with Number(value).</li>
+      <li>Boolean Conversion – Occurs in logical operations. Can be performed with Boolean(value).</li>
+    </ul>
+  </div>
+  <div class="footer"></div>
+  <script src="./script.js" type="module"></script>
+</body>
+</html>
