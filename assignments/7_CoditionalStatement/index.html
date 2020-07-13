@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning JavaScript in 2020</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./../../css/style.css" />
+  </head>
+  <body>
+    <div class="js-banner"></div>
+    <div class="container mt-5">
+      <h2>Conditional Statement in JS</h2>
+      <div class="row">
+        <div class="col-md-8">
+          <p>
+            A conditional statement, symbolized by p q, is an if-then statement
+            in which p is a hypothesis and q is a conclusion. The logical
+            connector in a conditional statement is denoted by the symbol . The
+            conditional is defined to be true unless a true hypothesis leads to
+            a false conclusion.
+          </p>
+          <p>
+            This is the ability to test a variable against a value and act in
+            one way if the condition is met by the variable or another way if
+            not. They are also commonly called by programmers if statements.
+          </p>
+          <span class="code-editor" id="conditional-statement"></span>
+          <p>In JavaScript we have the following conditional statements:</p>
+          <ul class="pl-5">
+            <li>
+              Use <code>if</code> to specify a block of code to be executed, if
+              a specified condition is true
+            </li>
+            <li>
+              Use <code>else</code> to specify a block of code to be executed,
+              if a specified condition is false
+            </li>
+            <li>
+              Use <code>else if</code> to specify a new condition to test, if
+              the first condition is false
+            </li>
+            <li>
+              Use <code>switch</code> to specify many alternative blocks of code
+              to be executed
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="./assets/if_else.png"
+            alt="if-else-statement"
+            class="img-thumbnail"
+          />
+        </div>
+      </div>
+      <span class="h5">if Statement</span>
+      <p>
+        Use the if statement to specify a block of JavaScript code to be
+        executed if a condition is true.
+      </p>
+      <b>Syntax</b>
+      <span class="code-editor" id="if-syntax"></span>
+      <b>Example</b>
+      <span class="code-editor" id="if-example"></span>
+      <br>
+      <span class="h5">else Statement</span>
+      <p>
+        The else statement to specify a block of code to be executed if the condition is false.
+      </p>
+      <b>Syntax</b>
+      <span class="code-editor" id="else-syntax"></span>
+      <b>Example</b>
+      <span class="code-editor" id="else-example"></span>
+      <br>
+      <span class="h5">else if Statement</span>
+      <p>The else if statement to specify a new condition if the first condition is false.</p>
+      <b>Syntax</b>
+      <span class="code-editor" id="else-if-syntax"></span>
+      <b>Example</b>
+      <span class="code-editor" id="else-if-example"></span>
+      <br>
+      <div class="row">
+        <div class="col-md-5">
+          <span class="h5">Example</span><br>
+          <b>Check weather no. is positive</b>
+          <span class="code-editor" id="example-1"></span>
+          <b>Check weather no. is positive or negative</b>
+          <span class="code-editor" id="example-2"></span>
+          <b>Check weather no. is positive, negative or zero</b>
+          <span class="code-editor" id="example-3"></span>
+        </div>
+        <div class="col-md-7">
+          <span class="h5">Video</span>
+          <br>
+          <a href="./exampleCode.js">
+            <i class="fa fa-download"></i>
+            Download Code
+          </a>
+          <video width="100%" height="400" controls>
+            <source src="./assets/Conditional Statement Example.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-5">
+          <span class="h5">Task 1: Simple User Login</span>
+          <p>
+            Required Condition: 
+            <ul class="pl-4">
+              <li>Allow user to login iff username and password matches the required value.</li>
+              <li>print welcome message of your choice if the above condition matches</li>
+              <li>else exit from the program with invalid message</li>
+            </ul>
+          </p>
+        </div>
+        <div class="col-md-7">
+          <span class="h5">CodeBlock</span>
+          <span class="code-editor" id="task-one"></span>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-5">
+          <span class="h5">Task 2: Fruits or Vegitables</span>
+          <p>
+            Required Condition: 
+            <ul class="pl-4">
+              <li>on the basis of user choice display </li>
+              <li>weather he/she loves fruits or vegitables</li>
+              <li>else display that the list is insufficent to predict the result</li>
+            </ul>
+          </p>
+          <span class="code-editor" id="task-two"></span>
+        </div>
+        <div class="col-md-7">
+          <span class="h5">Video</span>
+          <br>
+          <a href="./exampleCode.js">
+            <i class="fa fa-download"></i>
+            Download Code
+          </a>
+          <video width="100%" height="400" controls>
+            <source src="./assets/Fruits or Vegetables .mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <span class="h5">switch Statement</span>
+    <p>
+      The switch statement is used to perform different actions based on different conditions. Use the switch statement to select one of many code blocks to be executed.
+    </p>
+    <span class="code-editor" id="switch-syntax"></span>
+    <b>Q. How it works?</b>
+    <p>
+      <ul class="pl-5">
+        <li>The switch expression is evaluated once.</li>
+        <li>The value of the expression is compared with the values of each case.</li>
+        <li>If there is a match, the associated block of code is executed.</li>
+        <li>If there is no match, the default code block is executed.</li>
+      </ul>
+      <b>Note: </b>If you omit the break statement, the next case will be executed even if the evaluation does not match the case.
+    </p>
+    <span class="code-editor" id="switch-example"></span>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <span class="h5">Example</span><br>
+          <b>Display the price of selected fruits</b>
+          <span class="code-editor" id="switch-example-one"></span>
+      </div>
+    </div>
+    <hr>
+    <span class="h4">Summary</span>
+    <p>In JavaScript we have the following conditional statements:</p>
+    <ul class="pl-5">
+      <li>
+        Use <code>if</code> to specify a block of code to be executed, if a specified condition is true
+      </li>
+      <li>
+        Use <code>else</code> to specify a block of code to be executed, if a specified condition is false
+      </li>
+      <li>
+        Use <code>else if</code> to specify a new condition to test, if the first condition is false
+      </li>
+      <li>
+        Use <code>switch</code> to specify many alternative blocks of code to be executed
+      </li>
+    </ul>
+    </div>
+    <div class="footer"></div>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
