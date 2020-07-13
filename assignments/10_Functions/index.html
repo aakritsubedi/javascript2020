@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning JavaScript in 2020</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./../../css/style.css" />
+  </head>
+  <body>
+    <div class="js-banner"></div>
+    <div class="container mt-5">
+      <h2>Functions in JS</h2>
+      <div class="row mt-3">
+        <div class="col-md-8">
+          <p>
+            Functions are "self contained" modules of code that accomplish a
+            specific task. Functions usually "take in" data, process it, and
+            "return" a result. Once a function is written, it can be used over
+            and over and over again. Functions can be "called" from the inside
+            of other functions.
+          </p>
+          <p>To create a function we can use a function declaration in JS.</p>
+          <b>Syntax:</b>
+          <span class="code-editor" id="function-syntax"></span>
+        </div>
+        <div class="col-md-4">
+          <img src="./assets/functions.png" alt="Function Syntax" class="img-thumbnail">
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-4">
+          <img src="./assets/functionStructure.png" alt="Structure of function" class="img-thumbnail">
+        </div>
+        <div class="col-md-8">
+          <span class="h5">Function Structure</span>
+          <p>The function keyword goes first, then goes the name of the function, then a list of parameters between the parentheses (comma-separated) and finally the code of the function, also named “the function body”, between curly braces.</p>
+          <span class="code-editor" id="function-eg-one"></span>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <span class="h5">Variable Rules</span>
+          <ul class="pl-5">
+            <li>A variable declared inside a function is only visible inside that function.</li>
+            <li>A function can access an outer variable as well and also it can modify it as well.</li>
+            <li>The outer variable is only used if there’s no local one. If a same-named variable is declared inside the function then it shadows the outer one.</li>
+          </ul>
+          <span class="code-editor" id="function-variable"></span>
+          <b>Note: </b>
+          <p>Variables declared outside of any function, such as the outer, are called global. Global variables are visible from any function (unless shadowed by locals). It’s a good practice to <u>minimize the use of global variables</u>. Modern code has few or no globals. Most variables reside in their functions. Sometimes though, they can be useful to store project-level data.</p>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <span class="h5">Parameters</span>
+          <p>A parameter or a formal argument, is a special kind of variable, used in a subroutine to refer to one of the pieces of data provided as input to the subroutine.</p>
+          <span class="code-editor" id="func-parameters"></span>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <span class="h5">Default Value</span>
+          <p>If a parameter is not provided, then its value becomes undefined.  A parameter has a default value of undefined. It means that if you don't pass the arguments into the function, its parameters will have the default values of undefined .</p>
+          <p>That’s not an error. There’s no value, so it’s assumed that value becomes undefined. If we want to use a “default” text in this case, then we can specify it after equal to(=).</p>
+          <span class="code-editor" id="func-default-value"></span>
+          <p>To check for an omitted parameter, we can compare it with undefined or could use the || operator</p>
+          <span class="code-editor" id="func-default-alternate"></span>
+          <br>
+          <p>Modern JavaScript engines support the <code>nullish coalescing operator <b>??</b></code>, it’s better when falsy values, such as 0, are considered regular:</p>
+          <span class="code-editor" id="nullish-operator"></span>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <span class="h5">Returning a value</span>
+          <p>A function can return a value back into the calling code as the result.</p>
+          <span class="code-editor" id="func-return"></span>
+          <p>It is possible to use return without a value. That causes the function to exit immediately. If a function does not return a value, it is the same as if it returns undefined. </p>
+          <span class="code-editor" id="empty-return"></span>
+          <b>Note: </b>
+          <p>Never add a newline between return and the value. That doesn’t work, because JavaScript assumes a semicolon after return statement.</p>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <span class="h5">Naming a function</span>
+          <p>
+            Functions are actions. So their name is usually a verb. It should be brief, as accurate as possible and describe what the function does, so that someone reading the code gets an indication of what the function does.
+          </p>
+          <p>
+            It is a widespread practice to start a function with a verbal prefix which vaguely describes the action. There must be an agreement within the team on the meaning of the prefixes.
+          </p>
+          <p>Function starting with…</p>
+          <ul class="pl-5">
+            <li>"show..." – display something</li>
+            <li>"get…" – return a value</li>
+            <li>"calc…" – calculate something</li>
+            <li>"create…" – create something</li>
+            <li>"check…" – check something and return a boolean</li>
+          </ul>
+          <p>With prefixes in place, a glance at a function name gives an understanding what kind of work it does and what kind of value it returns.</p>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <span class="h5">Good Practice to follow</span>
+        <ul class="pl-5">
+          <li>
+            <b>One function – one action</b>
+            <p>
+              A function should do exactly what is suggested by its name, no more. Two independent actions usually deserve two functions, even if they are usually called together. 
+            </p>
+            <p>Functions should be short and do exactly one thing. If that thing is big, maybe it’s worth it to split the function into a few smaller functions. Sometimes following this rule may not be that easy, but it’s definitely a good thing. </p>
+            <b>Note: </b> A separate function is not only easier to test and debug – its very existence is a great comment!
+            <span class="code-editor" id="break-function"></span>
+          </li>
+          <li>
+            <b>Function naming</b>
+            <p>Generally functions names should be concise and descriptive.</p>
+          </li>
+        </ul>
+      </div>
+      <hr>
+      <div class="row mt-1">
+        <div class="col-md-12">
+          <span class="h4">Summary</span>
+        <br>
+        <li>Function Structure</li>
+        <ul class="pl-5">
+          <li>Values passed to a function as parameters are copied to its local variables</li>
+          <li>A function may access outer variables. But it works only from inside out. The code outside of the function doesn’t see its local variables</li>
+          <li>A function can return a value. If it doesn’t, then its result is undefined</li>
+        </ul>
+        <li>To make the code clean and easy to understand, it’s recommended to use mainly local variables and parameters in the function, not outer variables</li>
+        <li>Function Naming</li>
+        <ul class="pl-5">
+          <li>A name should clearly describe what the function does. When we see a function call in the code, a good name instantly gives us an understanding what it does and returns</li>
+          <li>A function is an action, so function names are usually verbal</li>
+          <li>There exist many well-known function prefixes like create…, show…, get…, check… and so on. Use them to hint what a function does</li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer"></div>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
