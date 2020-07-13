@@ -9,7 +9,8 @@ const tableOfContent = [
   { sn: 7, title: 'Conditional Statement', github: '7_CoditionalStatement', demo: '7_CoditionalStatement'},
   { sn: 8, title: 'Looping Statement', github: '8_LoopingStatement', demo: '8_LoopingStatement'},
   { sn: 9, title: 'Task: Printing patterns', github: '9_PrintingPatterns', demo: '9_PrintingPatterns'},
-  { sn: 10, title: 'Functions', github: '10_Functions', demo: '10_Functions'}
+  { sn: 10, title: 'Functions', github: '10_Functions', demo: '10_Functions'},
+  { sn: 11, title: 'Understanding Function with more examples', github: '11_UnderstandingFunction', demo: '11_UnderstandingFunction'}
 ]
 
 let toc = document.getElementById('toc');

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning JavaScript in 2020</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./../../css/style.css" />
+  </head>
+  <body>
+    <div class="js-banner"></div>
+    <div class="container mt-5">
+      <h2>Understanding Function with examples</h2>
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <span class="h5">Example 1: Add two no.</span>
+          <ul class="pl-5">
+            <li>
+              <b>Simple Way</b>
+              <p>
+                Here, a function is defined and displays the result inside the
+                function
+              </p>
+              <span class="code-editor" id="add-simple-way"></span>
+            </li>
+            <li>
+              <b>Pass an argument a and b</b>
+              <p>
+                Let us now pass the different value of a and b to compute the
+                sum.
+              </p>
+              <span class="code-editor" id="add-parameter-way"></span>
+            </li>
+            <li>
+              <b>Default parameter</b>
+              <p>
+                In above example, if we don't pass the value the result is
+                undefined. The <b>default value</b> of the argument is equal to
+                undefined. So, default parameter is fallback value to return the
+                result assigning the default value to the arguments.
+              </p>
+              <span class="code-editor" id="add-default-way"></span>
+            </li>
+            <li>
+              <b>Returning the value</b>
+              <p>
+                Here, a function returns the value and used in the main program.
+              </p>
+              <span class="code-editor" id="add-return-way"></span>
+              <p>Let's modify the summation function ...</p>
+              <span class="code-editor" id="add-return-best-way"></span>
+            </li>
+          </ul>
+          <a href="./code/addition.js"> Download Code</a>
+        </div>
+      </div>
+      <hr>
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <span class="h5">Example 2: Voter eligibility checker.</span>
+          <p>must have valid citizenship number and age should be greater than equal to 18.</p>
+          <p>Here, assuming the valid citizenship array as: <code>['123795','125963','199533','156996','125639']</code></p>
+          <b>Note: </b> Define an array of eligible citizenship number
+          <span class="code-editor" id="valid-citizenship-no"></span>
+          <ul class="pl-5">
+            <li>
+              <b>Simple Way</b>
+              <p>Here, a function is defined and displays the message inside the function.</p>
+              <span class="code-editor" id="vote-simple-way"></span>
+            </li>
+            <li>
+              <b>Pass an argument</b>
+              <p>Let us now pass the different value of citizenshipNo and age to check eligibility.</p>
+              <span class="code-editor" id="vote-argument-way"></span>
+            </li>
+            <li>
+              <b>Default Parameters</b>
+              <p>Here, we use 18 as the default value for the age.</p>
+              <span class="code-editor" id="vote-default-way"></span>
+            </li>
+            <li>
+              <b>Returning the value</b>
+              <p>
+                Here, a function returns the value and used in the main program.
+              </p>
+              <span class="code-editor" id="vote-return-way"></span>
+              <p>Let's modify the checkVoterEligibility function ...</p>
+              <span class="code-editor" id="vote-return-best-way"></span>
+            </li>
+          </ul>
+          <a href="./code/voterEligibility.js"> Download Code</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer"></div>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
