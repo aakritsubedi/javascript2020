@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript in 2020</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./../../css/style.css">
+</head>
+<body>
+  <div class="js-banner"></div>
+  <div class="container mt-5">
+    <h2>Looping Statement in JS</h2>
+    <div class="row">
+      <div class="col-md-8">
+        <p>
+          A loop in a computer program is an instruction that repeats until a specified condition is reached. Loops are a way to repeat the same code multiple times.
+        </p>
+        <span class="h5">Types of Loops</span>
+        <ul class="pl-5">
+          <li>A <code>for</code> loop is a loop that runs for a preset number of times.</li>
+          <li>A <code>while</code> loop is a loop that is repeated as long as an expression is true. An expression is a statement that has a value.</li>
+          <li>A <code>do while</code> loop or repeat until loop repeats until an expression becomes false.</li>
+        </ul>
+        <p>
+          A nested loop appears inside any other for, while or do while loop
+        </p>
+        <p>
+          A <code>goto</code> statement can create a loop by jumping backward to a label, although this is generally discouraged as a <u>bad programming practice</u>. For some complex code, it allows a jump to a common exit point that simplifies the code.
+        </p> 
+        <p>
+          An infinite or endless loop is a loop that repeats indefinitely because it has no terminating condition, the exit condition is never met or the loop is instructed to start over from the beginning. Although it is possible for a programmer to intentionally use an infinite loop, they are often mistakes made by new programmers.
+        </p>
+        <span class="h5">Loop Control Statements</span>
+        <p>A statement that alters the execution of a loop from its designated sequence is a loop control statement.</p>
+        <ul class="pl-5">
+          <li>A <code>break</code> statement inside a loop terminates the loop immediately.</li>
+          <li>A <code>continue</code> statement jumps to the next iteration of the loop, skipping any code in between.</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <img src="./assets/looping.png" alt="Looping in JS">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-7">
+        <span class="h5">for Loop</span><br>
+        The for loop has the following syntax:
+        <span class="code-editor" id="for-syntax"></span>
+        <p>Let’s examine the for statement part-by-part:</p>
+        <table class="table table-sm" style="font-size: 12px;">
+          <tr>
+            <th>part</th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>begin/initilization</td>
+            <td>i = 1</td>
+            <td>Executes once upon entering the loop.</td>
+          </tr>
+          <tr>
+            <td>condition</td>
+            <td>i &lt;=10 </td>
+            <td>Checked before every loop iteration. If false, the loop stops.</td>
+          </tr>
+          <tr>
+            <td>body</td>
+            <td>console.log(`${n} * ${i} = ${n*i}`);</td>
+            <td>Runs again and again while the condition is truthy.</td>
+          </tr>
+          <tr>
+            <td>step/update</td>
+            <td>i++</td>
+            <td>Executes after the body on each iteration.</td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-5">
+        <br>
+        <b>Print multiplication table</b>
+        <span class="code-editor" id="for-example"></span>
+        <video width="360" height="240" controls class="float-right">
+          <source src="./assets/for example.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-7">
+        <span class="h5">while Loop</span>
+        <p>The while loop has the following syntax:</p>
+        <span class="code-editor" id="while-syntax"></span>
+        <b>Print multiplication table</b>
+        <span class="code-editor" id="while-example"></span>
+      </div>
+      <div class="col-md-5">
+        <video width="360" height="240" controls class="float-right">
+          <source src="./assets/while loop.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-7">
+        <span class="h5">do...while Loop</span>
+        <p>The do...while loop has the following syntax:</p>
+        <span class="code-editor" id="do-while-syntax"></span>
+        <b>Print multiplication table</b>
+        <span class="code-editor" id="do-while-example"></span>
+      </div>
+      <div class="col-md-5">
+        <video width="360" height="240" controls class="float-right">
+          <source src="./assets/do...while loop.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    <hr>
+    <span class="h4">Summary</span>
+    <li>Types of loops</li>
+    <ul class="pl-5">
+      <li>while – The condition is checked before each iteration</li>
+      <li>do..while – The condition is checked after each iteration</li>
+      <li>for (;;) – The condition is checked before each iteration, additional settings available</li>
+    </ul>
+    <li>To make an “infinite” loop, usually the <code>while(true)</code> construct is used. Such a loop, just like any other, can be stopped with the break directive.</li>
+    <li>to skip the current iteration or to forward to the next one, we can use the <code>continue</code> directive.</li>
+    <li><code>break</code> statement inside a loop terminates the loop immediately</li>
+    <b>Note: </b>  A label is the only way for break/continue to escape a nested loop to go to an outer one.
+  </div>
+  <div class="footer"></div>
+  <script src="./script.js" type="module"></script>
+</body>
+</html>
