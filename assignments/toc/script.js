@@ -7,7 +7,8 @@ const tableOfContent = [
   { sn: 5, title: 'Type Conversions', github: '5_TypeConversions', demo: '5_TypeConversions'},
   { sn: 6, title: 'Basic operators, maths', github: '6_BasicOperators', demo: '6_BasicOperators'},
   { sn: 7, title: 'Conditional Statement', github: '7_CoditionalStatement', demo: '7_CoditionalStatement'},
-  { sn: 8, title: 'Looping Statement', github: '8_LoopingStatement', demo: '8_LoopingStatement'}
+  { sn: 8, title: 'Looping Statement', github: '8_LoopingStatement', demo: '8_LoopingStatement'},
+  { sn: 9, title: 'Task: Printing patterns', github: '9_PrintingPatterns', demo: '9_PrintingPatterns'}
 ]
 
 let toc = document.getElementById('toc');
