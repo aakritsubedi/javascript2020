@@ -10,7 +10,8 @@ const tableOfContent = [
   { sn: 8, title: 'Looping Statement', github: '8_LoopingStatement', demo: '8_LoopingStatement'},
   { sn: 9, title: 'Task: Printing patterns', github: '9_PrintingPatterns', demo: '9_PrintingPatterns'},
   { sn: 10, title: 'Functions', github: '10_Functions', demo: '10_Functions'},
-  { sn: 11, title: 'Understanding Function with more examples', github: '11_UnderstandingFunction', demo: '11_UnderstandingFunction'}
+  { sn: 11, title: 'Understanding Function with more examples', github: '11_UnderstandingFunction', demo: '11_UnderstandingFunction'},
+  { sn: 12, title: 'Function Expressions, Callback Function, Arrow Function', github: '12_MoreFunction', demo: '12_MoreFunction'}
 ]
 
 let toc = document.getElementById('toc');

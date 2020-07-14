@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript in 2020</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./../../css/style.css">
+</head>
+<body>
+  <div class="js-banner"></div>
+  <div class="container mt-5">
+    <h2>More about functions in JS</h2>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <span class="h3">Function Expressions</span>
+        <p>A function expression is very similar to and has almost the same syntax as a function declaration. The main difference between a function expression and a function declaration is the function name, which can be omitted in function expressions to create anonymous functions.</p>
+        <p>A function expression can be stored in a variable:</p>
+        <span class="code-editor" id="function-expression"></span>
+        <p>Here, the function is created and assigned to the variable explicitly, like any other value. No matter how the function is defined, it’s just a value stored in the variable sayHi and x in above examples.</p>
+        <p>
+          In JavaScript, a function is a value, so we can deal with it as a value. The code above shows its string representation, which is the source code. Surely, a function is a special value, in the sense that we can call it. But it’s still a value. So we can work with it like with other kinds of values. We can copy a function to another variable.
+        </p>
+        <span class="code-editor" id="copy-as-variable"></span>
+        <p>Here’s what happens above</p>
+        <ul class="pl-5">
+          <li>The Function Declaration creates the function and puts it into the variable named sayHi and add.</li>
+          <li>copies it into the variable func and summation.</li>
+          <b>Note: </b> there are no parentheses after sayHi and add. If there were, then <code>func = sayHi()</code> and <code>summation = add()</code> would write the result of the call sayHi() and add() into func and summation, not the function sayHi and add itself.
+          <li>Now the function can be called as both sayHi() and func() or add(..) or summation(..)</li>
+        </ul>
+        <p>Q. Why is there a semicolon at the end?</p>
+        <p>Ans: There’s no need for ; at the end of code blocks and syntax structures that use them like if { ... }, for { }, function f { } etc.</p>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <span class="h3">Callback Function</span>
+        <p>A callback, also known as a "call-after" function, is any executable code that is passed as an argument to other code; that other code is expected to call back the argument at a given time.</p>
+        <p>A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.</p>
+        <b>Example: </b>
+        <p>The function should ask the question and, depending on the user’s answer, call yes() or no():</p>
+        <span class="code-editor" id="callback-function"></span>
+        <p>The arguments showOk and showCancel of ask are called callback functions or callbacks.</p>
+      </div>
+    </div>
+    <div class="row mt-1">
+      <div class="col-md-12">
+        <span class="h5">Function Expression vs Function Declaration</span>
+        <ul class="pl-5">
+          <ul>
+            <li>Function Declaration</li>
+              <span class="code-editor" id="function-declaration-eg-syntax"></span>
+            <li>Function Expression</li>
+              <span class="code-editor" id="function-expression-eg-syntax"></span>
+          </ul>
+          <p>The more subtle difference is when a function is created by the JavaScript engine.</p>
+          <ul>
+            <li>A Function Expression is created when the execution reaches it and is usable only from that moment.</li>
+            <p>Once the execution flow passes to the right side of the assignment let sum = function… – here we go, the function is created and can be used (assigned, called, etc. ) from now on.</p>
+            <li>A Function Declaration can be called earlier than it is defined.</li>
+            <span class="code-editor" id="eg-one"></span>
+          </ul>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <span class="h3">Arrow Function</span>
+        <p>An arrow function expression is a syntactically compact alternative to a regular function expression, although without its own bindings to the this, arguments, super, or new.target keywords.</p>
+        <p>Arrow functions allow us to write shorter function syntax.</p>
+        <span class="code-editor" id="arrow-function-syntax"></span>
+        <p>This creates a function func that accepts arguments arg1..argN, then evaluates the expression on the right side with their use and returns its result.</p>
+        <br>
+        <span class="code-editor" id="arrow-function-one"></span>
+        <p>It gets shorter! If the function has only one statement, and the statement returns a value, you can remove the brackets and the return keyword.</p>
+        <span class="code-editor" id="arrow-function-two"></span>
+        <b>Note: </b> This works only if the function has only one statement.
+        <p>If you have parameters, you pass them inside the parentheses.</p>
+        <span class="code-editor" id="arrow-function-three"></span>
+      </div>
+    </div>
+    <hr>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <span class="h4">Summary</span>
+        <ul class="pl-5">
+          <li>Functions are values. They can be assigned, copied or declared in any place of the code</li>
+          <li>The function is declared as a separate statement in the main code flow, that’s called a “Function Declaration” where as the function is created as a part of an expression, it’s called a “Function Expression”</li>
+          <li>Function Declarations are processed before the code block is executed. They are visible everywhere in the block where as Function Expressions are created when the execution flow reaches them</li>
+          <li>Arrow functions are handy for one-liners.</li>
+          <li>With arrow functions there are no binding of <code>this</code>.  Arrow functions the this keyword always represents the object that defined the arrow function.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer"></div>
+  <script src="./script.js" type="module"></script>
+</body>
+</html>
