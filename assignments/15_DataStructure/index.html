@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript in 2020</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./../../css/style.css">
+</head>
+<body>
+  <div class="js-banner"></div>
+  <div class="container mt-5">
+    <h2>Data Strucutre in JS</h2>
+    <div class="row mt-3">
+      <div class="col-md-4">
+        <img src="./assets/ds.jpg" alt="Data Structure" class="img-thumbnail" />
+      </div>
+      <div class="col-md-8">
+        <span class="h5">What are data structures</span>
+        <p>
+          A data structure is a particular way of organizing and storing data in a computer so that it can be accessed and modified efficiently. More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data.
+        </p>
+        <p>
+          Simply the data structure, at high level, are techniques for storing and organizing data that make it easier to modify, navigate, and access. Data structures determine how data is collected, the functions we can use to access it, and the relationships between data.
+        </p>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <p>Data structures enable us to:</p>
+        <ul class="pl-5">
+          <li>Manage and utilize large datasets</li>
+          <li>Search for particular data from a database</li>
+          <li>Simplify and speed up data processing</li>
+          <li>Design algorithms that are tailored towards particular programs</li>
+        </ul>
+        <p>
+          Data structures are vital for efficient, real-world problem solving. After all, the way we organize data has a lot of impact on performance and useability.
+        </p>
+        <p>JavaScript has primitive and non-primitive data structures.</p>
+        <ul class="pl-5">
+          <li> <b>Primitive data structures</b> and data types are native to the programming language. These include boolean, null, number, string, etc. </li>
+          <li> <b> Non-primitive data structures</b> are not defined by the programming language but rather by the programmer. These include linear data structures, static data structures, and dynamic data structures, like queue and linked lists.  The concept to handle a large amount of data that are complex and connected is called abstract data structure.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <span class="h4">Importance and Advantages</span>
+        <p> A right selection of data structure can enhance the efficiency of computer program or algorithm in a better way.</p>
+        <span class="h5">Why Data Structures are needed</span>
+        <p>With increasing complexities in computer algorithms, the amount of data usage is increasing, this can affect the performance of the application and can create some areas of concern.</p>
+        <ul class="pl-5">
+          <li><b>Processing speed: </b> To handle very large data, high-speed processing is required, but with growing data processor may fail to achive required processing speed.</li>
+          <li><b>Data Search: </b> Getting a particular record from database should be quick and with optimum use of resources.</li>
+          <li><b>Multiple requests: </b> To handle simultanous requests from multiple users.</li>
+        </ul>
+        <p>In order to work on concern areas, data structures are used. Data is organized to form a data structure in such a way that all items are not required to be searched and required data can be searched instantly.</p>
+        <span class="h5">Data Structure Advantages</span>
+        <ul class="pl-5">
+          <li><b>Efficient Memory use:</b> With efficient use of data structure memory usage can be optimized, for e.g we can use linked list vs arrays when we are not sure about the size of data. When there is no more use of memory, it can be released.</li>
+          <li><b>Reusability:</b> Data structures can be reused, i.e. once we have implemented a particular data structure, we can use it at any other place. Implementation of data structures can be compiled into libraries which can be used by different clients.</li>
+          <li><b>Abstraction:</b> Data structure serves as the basis of abstract data types, the data structure defines the physical form of ADT(Abstract Data Type). ADT is theoretical and Data structure gives physical form to them.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <span class="h3">7 JavaScript data structures</span>
+        <span class="h4 d-block mt-2">Array</span>
+        <p>The most basic of all data structures, an array stores data in memory for later use. Each array has a fixed number of cells decided on its creation, and each cell has a corresponding numeric index used to select its data. Whenever you’d like to use the array, all you need are the desired indices, and you can access any of the data within.</p>
+        <div class="row mt-1">
+          <div class="col-md-7">
+            <span class="h5">Advantage</span>
+            <ul class="pl-5">
+              <li>Simple to create and use</li>
+              <li>Foundational building block for complex data structures</li>
+            </ul>
+            <span class="h5">Disadvantage</span>
+            <ul class="pl-5">
+              <li>Fixed size</li>
+              <li>Expensive to insert/delete or resequence values</li>
+              <li>Inefficient to sort</li>
+            </ul>
+            <span class="h5">Application</span>
+            <ul class="pl-5">
+              <li>Basic spreadsheets</li>
+              <li>Within complex structures such as hash tables</li>
+            </ul>
+          </div>
+          <div class="col-md-5">
+            <img src="./assets/1Array.png" alt="Array" class="img-thumbnail">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"></div>
+  <script src="./script.js" type="module"></script>
+</body>
+</html>
