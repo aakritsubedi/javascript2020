@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning JavaScript in 2020</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./../../css/style.css" />
+  </head>
+  <body>
+    <div class="js-banner"></div>
+    <div class="container mt-5">
+      <h2>Array in JS</h2>
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <p>
+            An array is an object used to store a collection. This collection
+            could be anything: numbers, objects, more arrays, etc. In
+            JavaScript, arrays are used to store multiple values in one variable
+            that can be accessed through an index (which starts from zero). The
+            values stored in the array are called elements and the number of
+            elements stored in an array is typically referred to as the array’s
+            length. For example, in the illustration given below, the length of
+            the array is five.
+          </p>
+          <img src="./assets/1_array.png" alt="Array" class="img-thumbnail" />
+          <div style="height: 25px; width: 100%;"></div>
+          <span class="h5">How to declare and initialize an array?</span>
+          <p>In JavaScript, there are two ways to declare an array:</p>
+          <ul class="pl-5">
+            <li>
+              <b>Declare using array literal</b>
+              <p>
+                This is the most basic way to declare and initialize an array in
+                JavaScript
+              </p>
+              <span class="code-editor" id="array-literal"></span>
+            </li>
+            <li>
+              <b>Declare using array constructor</b>
+              <p>
+                You can also declare an array using a JavaScript built-in Array
+                class and initialize it by passing the values inside the
+                brackets, like this:​
+              </p>
+              <span class="code-editor" id="array-constructor"></span>
+            </li>
+          </ul>
+          <div style="height: 25px; width: 100%;"></div>
+          <span class="h5">How to access a value?</span>
+          <div class="row">
+            <div class="col-md-7">
+              <p>
+                To access a particular element in an array, you will need to
+                know the index of that element.
+              </p>
+              <code class="code-editor" id="array-accessing"></code>
+            </div>
+            <div class="col-md-5">
+              <img src="./assets/2_accessing_array.png" alt="Accessing Array" />
+            </div>
+          </div>
+          <span class="h5">How to modify an element in an array?</span>
+          <p>
+            The syntax to modify a value at a particular index, let’s say 2, is
+            this:
+          </p>
+          <span class="code-editor" id="array-modify"></span>
+          <div style="height: 25px; width: 100%;"></div>
+          <span class="h5">Are arrays in JavaScript objects?</span>
+          <p>
+            Arrays in JavaScript are objects. If you look at the
+            <code>typeof</code> of an array, it will return an object.
+          </p>
+          <span class="code-editor" id="array-is-object"></span>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <span class="h4">Array methods</span>
+          <p>
+            Arrays provide a lot of methods. To make things easier, in this
+            chapter they are split into groups.
+          </p>
+          <div class="pl-3">
+            <span class="h5">Add/remove items</span>
+            <ul class="pl-5">
+              <li>arr.push(...items) – adds items to the end</li>
+              <li>arr.pop() – extracts an item from the end</li>
+              <li>arr.shift() – extracts an item from the beginning</li>
+              <li>arr.unshift(...items) – adds items to the beginning</li>
+              <li>
+                arr.splice(index, howmany, item1, ....., itemX) – adds/removes
+                elements from an array
+              </li>
+              <li>
+                arr.slice(start, end) – selects a part of an array, and returns
+                the new array
+              </li>
+              <li>
+                arr.concat(arr2, arr3 ... arrN) – joins two or more arrays, and
+                returns a copy of the joined arrays
+              </li>
+            </ul>
+            <span class="code-editor" id="array-add-remove-method"></span>
+            <a href="./code/1_addOrRemove.js">Download Code</a>
+            <div style="height: 25px; width: 100%;"></div>
+            <span class="h5">Iterate: forEach</span>
+            <p>
+              The arr.forEach method allows to run a function for every element
+              of the array.
+            </p>
+            <span class="code-editor" id="array-foreach-syntax"></span>
+            <br />
+            <span class="code-editor" id="array-foreach-example"></span>
+            <a href="./code/2_foreach.js">Download Code</a>
+            <div style="height: 25px; width: 100%;"></div>
+            <span class="h5">Searching in array</span>
+            <ul class="pl-5">
+              <li>
+                <b>indexOf/lastIndexOf and includes</b>
+                <ul class="pl-5">
+                  <li>
+                    <code>arr.indexOf(item, from)</code> – looks for item
+                    starting from index from, and returns the index where it was
+                    found, otherwise -1.
+                  </li>
+                  <li>
+                    <code>arr.lastIndexOf(item, from)</code> – same, but looks
+                    for from right to left.
+                  </li>
+                  <li>
+                    <code>arr.includes(item, from)</code> – looks for item
+                    starting from index from, returns true if found.
+                  </li>
+                </ul>
+                <span class="code-editor" id="searching-one"></span>
+                <b>Note: </b>The methods use === comparison. So, if we look for
+                false, it finds exactly false and not the zero.
+              </li>
+              <li>
+                <b>find and findIndex</b>
+                <ul class="pl-5">
+                  <li>
+                    <code>findIndex()</code> method returns the index of the
+                    first element in an array that pass a test (provided as a
+                    function).
+                  </li>
+                  <p>
+                    The findIndex() method executes the function once for each
+                    element present in the array. If it finds an array element
+                    where the function returns a true value, findIndex() returns
+                    the index of that array element (and does not check the
+                    remaining values). Otherwise it returns -1
+                  </p>
+                  <li>
+                    <code>find()</code> method returns the value of the first
+                    element in an array that pass a test (provided as a
+                    function)
+                  </li>
+                  <p>
+                    The find() method executes the function once for each
+                    element present in the array. If it finds an array element
+                    where the function returns a true value, find() returns the
+                    value of that array element (and does not check the
+                    remaining values). Otherwise it returns undefined
+                  </p>
+                </ul>
+                <span class="code-editor" id="searching-two"></span>
+              </li>
+              <li>
+                <b>filter</b>
+                <p>
+                  The find method looks for a single (first) element that makes
+                  the function return true. We can use
+                  <code>arr.filter(fn)</code>. The filter() method creates an
+                  array filled with all array elements that pass a test
+                  (provided as a function)
+                </p>
+                <p>
+                  The syntax is similar to find, but filter returns an array of
+                  all matching elements.
+                </p>
+                <span class="code-editor" id="searching-three"></span>
+              </li>
+            </ul>
+            <a href="./code/3_searchingInArr.js">Download Code</a>
+            <div style="height: 25px; width: 100%;"></div>
+            <span class="h5">Transform an array</span>
+            <ul class="pl-5">
+              <li>
+                <code>map(func)</code> – creates a new array from results of
+                calling func for every element
+              </li>
+              <li>
+                <code>sort(func)</code> – sorts the array in-place, then returns
+                it
+              </li>
+              <li>
+                <code>reverse()</code> – reverses the array in-place, then
+                returns it
+              </li>
+              <li>
+                <code>split/join</code> – convert a string to array and back
+              </li>
+              <li>
+                <code>reduce(func, initial)</code> – calculate a single value
+                over the array by calling func for each element and passing an
+                intermediate result between the calls
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="row mt-1">
+        <div class="col-md-12">
+          <span class="h4">Summary</span>
+          <li>To add/remove elements:</li>
+          <ul class="pl-5">
+            <li>push(...items) – adds items to the end</li>
+            <li>pop() – extracts an item from the end</li>
+            <li>shift() – extracts an item from the beginning</li>
+            <li>unshift(...items) – adds items to the beginning</li>
+            <li>
+              splice(pos, deleteCount, ...items) – at index pos delete
+              deleteCount elements and insert items
+            </li>
+            <li>
+              slice(start, end) – creates a new array, copies elements from
+              position start till end (not inclusive) into it
+            </li>
+            <li>
+              concat(...items) – returns a new array: copies all members of the
+              current one and adds items to it. If any of items is an array,
+              then its elements are taken
+            </li>
+          </ul>
+          <li>To search among elements:</li>
+          <ul class="pl-5">
+            <li>indexOf/lastIndexOf(item, pos) – look for item starting from position pos, return the index or -1 if not found</li>
+            <li>includes(value) – returns true if the array has value, otherwise false</li>
+            <li>find/filter(func) – filter elements through the function, return first/all values that make it return true</li>
+            <li>findIndex is like find, but returns the index instead of a value</li>
+          </ul>
+          <li>To iterate over elements:</li>
+          <ul class="pl-5">
+            <li>forEach(func) – calls func for every element, does not return anything</li>
+          </ul>
+          <li>To transform the array</li>
+          <ul class="pl-5">
+            <li>
+              map(func) – creates a new array from results of
+              calling func for every element
+            </li>
+            <li>
+              sort(func) – sorts the array in-place, then returns
+              it
+            </li>
+            <li>
+              reverse() – reverses the array in-place, then
+              returns it
+            </li>
+            <li>
+              split/join – convert a string to array and back
+            </li>
+            <li>
+              reduce(func, initial) – calculate a single value
+              over the array by calling func for each element and passing an
+              intermediate result between the calls
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer"></div>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>

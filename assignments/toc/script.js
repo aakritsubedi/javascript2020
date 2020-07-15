@@ -11,7 +11,10 @@ const tableOfContent = [
   { sn: 9, title: 'Task: Printing patterns', github: '9_PrintingPatterns', demo: '9_PrintingPatterns'},
   { sn: 10, title: 'Functions', github: '10_Functions', demo: '10_Functions'},
   { sn: 11, title: 'Understanding Function with more examples', github: '11_UnderstandingFunction', demo: '11_UnderstandingFunction'},
-  { sn: 12, title: 'Function Expressions, Callback Function, Arrow Function', github: '12_MoreFunction', demo: '12_MoreFunction'}
+  { sn: 12, title: 'Function Expressions, Callback Function, Arrow Function', github: '12_MoreFunction', demo: '12_MoreFunction'},
+  { sn: 13, title: 'Objects', github: '13_Objects', demo: '13_Objects'},
+  { sn: 14, title: 'Array', github: '14_Array', demo: '14_Array'},
+  { sn: 15, titlt: 'Data Structure', github: '15_DataStructure', demo: '15_DataStructure'}
 ]
 
 let toc = document.getElementById('toc');
