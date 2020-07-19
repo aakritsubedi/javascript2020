@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning JavaScript in 2020</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./../../css/style.css" />
+  </head>
+  <body>
+    <div class="js-banner"></div>
+    <div class="container mt-5">
+      <h2>Stack Implementation in JS</h2>
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <span class="h5">Array Implementation of Stack</span>
+          <p>In stack, insertion and deletion happen at the same ends.</p>
+          <p>
+            A good real-life example of a stack is the pile of dinner plates
+            that you encounter when you eat at the local cafeteria: When you
+            remove a plate from the pile, you take the plate on the top of the
+            pile. But this is exactly the plate that was added most recently to
+            the pile by the dishwasher.
+          </p>
+          <div class="row mt-1">
+            <div class="col-md-8">
+              <p>
+                To implement a stack using array, create an array arr of size n
+                and take one variables top which will be initialized to 0 which
+                means the stack is currently empty. Now, some of the
+                implementation of stack operations are as follows:
+              </p>
+              <ul class="pl-5">
+                <li>
+                  <b>Push: </b>
+                  Adds an item in the stack. If the stack is full, then it is
+                  said to be an Overflow condition.
+                </li>
+                <li>
+                  <b>Pop: </b>
+                  Removes an item from the stack. The items are popped in the
+                  reversed order in which they are pushed. If the stack is
+                  empty, then it is said to be an Underflow condition.
+                </li>
+                <li>
+                  <b>Peek or Top: </b>
+                  Returns top element of stack.
+                </li>
+                <li>
+                  <b>isEmpty: </b>
+                  Returns true if stack is empty, else false.
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <img
+                src="./assets/stackImplementation.png"
+                alt="Stack Implementation"
+                class="img-thumbnail"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <span class="h4">Stack Implementation using Array</span>
+          <span class="code-editor" id="stack-implementation"></span>
+          <a href="./code/stack.js">Download Code</a>
+          <br />
+          <span class="h6">Using Stack</span>
+          <span class="code-editor" id="example-one"></span>
+          <a href="./code/1_stackEg.js">Download Code</a>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <span class="h4">Check for balanced parentheses</span>
+          <p>
+            <code>Problem statement: </code>
+            Implement the <code>isBalanced()</code> function to take a string
+            containing only curly {}, square [], and round () parentheses. The
+            function should tell us if all the parentheses in the string are
+            balanced. This means that every opening parenthesis will have a
+            closing one. For example, {[]} is balanced, but {[}] is not.
+          </p>
+          <b>Input: </b> A string consisting solely of (, ), {, }, [ and ]<br />
+          <code>let exp = "{[({})]}"</code><br />
+          <b>Output: </b> Returns False if the expression doesn’t have balanced
+          parentheses. If it does, the function returns True. <br />
+          <code>result = True</code>
+          <span class="code-editor" id="balanced-parenthesis"></span>
+          <a href="./code/balancedParenthesis.js">Download Code</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer"></div>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
