@@ -95,6 +95,61 @@
         </div>
       </div>
     </div>
+    <div class="row mt-4">
+      <span class="h4 d-block mt-2">Queue</span>
+      <p>A Queue is a linear structure which follows a particular order in which the operations are performed. The order is First In First Out (FIFO). </p>
+      <p>
+        Queues are conceptually similar to stacks; both are sequential structures, but queues process elements in the order they were entered rather than the most recent element. As a result, queues can be thought of as a FIFO (First In, First Out) version of stacks. These are helpful as a buffer for requests, storing each request in the order it was received until it can be processed.
+      </p>
+      <p>
+        The difference between stacks and queues is in removing. In a stack we remove the item the most recently added; in a queue, we remove the item the least recently added.
+      </p>
+      <p>
+        For a visual, consider a single-lane tunnel: the first car to enter is the first car to exit. If other cars should wish to exit, but the first stops, all cars will have to wait for the first to exit before they can proceed.
+      </p>
+      
+      <div class="row mt-1">
+        <div class="col-md-7">
+          <span class="h5">Advantange</span>
+          <ul class="pl-5">
+            <li>Dynamic size</li>
+            <li>Orders data in the order it was received</li>
+            <li>Low runtime</li>
+          </ul>
+          <span class="h5">Disadvantage</span>
+          <ul class="pl-5">
+            <li>Can only retrieve the oldest element</li>
+          </ul>
+          <span class="h5">Application</span>
+          <ul class="pl-5">
+            <li>Effective as a buffer when receiving frequent data</li>
+            <li>Convenient way to store order-sensitive data such as stored voicemails</li>
+            <li>Ensures the oldest data is processed first</li>
+          </ul>
+          <span class="h5">Time Complexity in big O notation</span>
+          <table class="table table-sm">
+            <tr>
+              <th>Algorithm</th> <th>Average</th> <th>Worst Case</th>
+            </tr>
+            <tr>
+              <td>Space</td> <td>O(n)</td> <td>O(n)</td>
+            </tr>
+            <tr>
+              <td>Search</td> <td>O(n)</td> <td>O(n)</td>
+            </tr>
+            <tr>
+              <td>Insert</td> <td>O(1)</td> <td>O(1)</td>
+            </tr>
+            <tr>
+              <td>Delete</td> <td>O(1)</td> <td>O(1)</td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-5">
+          <img src="./assets/2Queue.png" alt="Queue" class="img-thumbnail"/>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="footer"></div>
   <script src="./script.js" type="module"></script>

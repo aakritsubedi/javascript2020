@@ -16,7 +16,7 @@ const tableOfContent = [
   { sn: 14, title: 'Array', github: '14_Array', demo: '14_Array'},
   { sn: 15, title: 'Data Structure', github: '15_DataStructure', demo: '15_DataStructure' },
   { sn: 15.1, title: 'Problem Solving in Array', github: '15.1_Array', demo: '15.1_Array' },
-  { sn: 15.2, title: 'Queue Implementation (WIP)', github: '15.2_Queue', demo: '15.2_Queue'},
+  { sn: 15.2, title: 'Queue Implementation', github: '15.2_Queue', demo: '15.2_Queue'},
   { sn: 15.3, title: 'Stack Implementation (WIP)', github: '15.3_Stack', demo: '15.3_Stack'},
   { sn: 15.4, title: 'Linked List Implementation (WIP)', github: '15.4_LinkedList', demo: '15.4_LinkedList' },
   { sn: 15.5, title: 'Tree Implementation (WIP)', github: '15.5_Tree', demo: '15.5_Tree'},

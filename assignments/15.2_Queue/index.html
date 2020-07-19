@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript in 2020</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./../../css/style.css">
+</head>
+<body>
+  <div class="js-banner"></div>
+  <div class="container mt-5">
+    <h2>Queue Implementation in JS</h2>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <span class="h5">Array Implementation of Queue</span>
+        <p>In queue, insertion and deletion happen at the opposite ends.</p>
+        <p>
+          A good example of a queue is any queue of consumers for a resource where the consumer that came first is served first. The difference between stacks and queues is in removing. In a stack we remove the item the most recently added; in a queue, we remove the item the least recently added.
+        </p>
+        <div class="row mt-1">
+          <div class="col-md-8">
+            <p>
+              To implement a queue using array, create an array arr of size n and take two variables front and rear both of which will be initialized to 0 which means the queue is currently empty. Element rear is the index upto which the elements are stored in the array and front is the index of the first element of the array. Now, some of the implementation of queue operations are as follows:
+            </p>
+            <ul class="pl-4">
+              <li>
+                <b>Enqueue: </b> 
+                Addition of an element to the queue. Adding an element will be performed after checking whether the queue is full or not. If <code>rear &lt; n</code> which indicates that the array is not full then store the element at arr[rear] and increment rear by 1 but if <code>rear == n</code> then it is said to be an Overflow condition as the array is full.
+              </li>
+              <li>
+                <b>Dequeue: </b>
+                Removal of an element from the queue. An element can only be deleted when there is at least an element to delete i.e. <code>rear &gt; 0</code>. Now, element at arr[front] can be deleted but all the remaining elements have to shifted to the left by one position in order for the dequeue operation to delete the second element from the left on another dequeue operation.
+              </li>
+              <li>
+                <b>Front/Top: </b>
+                Get the front element from the queue i.e. arr[front] if queue is not empty.
+              </li>
+              <li>
+                <b>Display: </b>
+                Print all element of the queue. If the queue is non-empty, traverse and print all the elements from index front to rear.
+              </li>
+            </ul>
+            
+          </div>
+          <div class="col-md-4">
+            <img src="./assets/queueOperation.png" alt="Queue Explanation" class="img-thumbnail">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <span class="h5">Queue Implementation using Array</span>
+        <span class="code-editor" id="queue-implementation"></span>
+        <a href="./code/queue.js">Download Code</a><br>
+        <span class="h6">Using Queue</span>
+        <span class="code-editor" id="example-one"></span>
+        <a href="./code/1_usingQueue.js">Download Code</a>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <span class="h4">Generate Binary Numbers from 1 to n</span>
+        <p>
+          <code>Problem statement: </code>
+          Implement a function <code>findBin(n)</code>, which will generate binary numbers from 1 to n in the form of a string using a queue.
+        </p>
+        <b>Input: </b> A positive integer n<br>
+        <code>let n = 3;</code><br>
+        <b>Output: </b> Returns binary numbers in the form of strings from 1 up to n <br>
+        <code>result = ["1","10","11"]</code>
+        <span class="code-editor" id="find-binary"></span>
+        <a href="./code/2_findBin.js">Download Code</a>
+       </div>
+    </div>
+  </div>
+  <div class="footer"></div>
+  <script src="./script.js" type="module"></script>
+</body>
+</html>
