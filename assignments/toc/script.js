@@ -15,7 +15,8 @@ const tableOfContent = [
   { sn: 13, title: 'Objects', github: '13_Objects', demo: '13_Objects'},
   { sn: 14, title: 'Array', github: '14_Array', demo: '14_Array'},
   { sn: 15, title: 'Data Structure', github: '15_DataStructure', demo: '15_DataStructure' },
-  { sn: 16, title: 'Implementation of Data Structure', github: '16_DS', demo: '16_DS' }
+  { sn: 16, title: 'Implementation of Data Structure', github: '16_DS', demo: '16_DS' },
+  { sn: 17, title: 'Implementation of Algorithm', github: '17_Algo', demo: '17_Algo'}
 ]
 
 let getGithubLink = value => {
