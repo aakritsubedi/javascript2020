@@ -22,3 +22,7 @@
 .code-editor {
   margin: 25px 0;
 }
+
+.img-thumbnail {
+  border: none;
+}
