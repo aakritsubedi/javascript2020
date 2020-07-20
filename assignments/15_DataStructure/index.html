@@ -303,7 +303,6 @@
             they can proceed.
           </p>
         </div>
-
         <div class="row mt-1">
           <div class="col-md-7">
             <span class="h5">Advantange</span>
@@ -356,6 +355,109 @@
           </div>
           <div class="col-md-5">
             <img src="./assets/2Queue.png" alt="Queue" class="img-thumbnail" />
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <span class="h4 d-block mt-2">Linked List</span>
+          <p>
+            Like arrays, Linked List is a linear data structure. Unlike arrays, linked list elements are not stored at a contiguous location; the elements are linked using pointers.
+          </p>
+          <p>
+            A linked list is a common data structure made of a chain of nodes in which each node contains a value and a pointer to the next node in the chain. The head pointer points to the first node, and the last element of the list points to null. When the list is empty, the head pointer points to null.
+          </p>
+          <p>
+            Linked lists can dynamically increase in size and it is easy to insert and delete from a linked list because unlike arrays, we only need to change the pointers of the previous element and the next element to insert or delete an element.
+          </p>
+          <p>
+            A linked list is a linear data structure where each element is a separate object. Each element (we will call it a node) of a list is comprising of two items - the data and a reference to the next node. The last node has a reference to null. The entry point into a linked list is called the head of the list. It should be noted that head is not a separate node, but the reference to the first node. If the list is empty then the head is a null reference.
+          </p>
+          <span class="h5 d-block">Types:</span>
+          <ul class="pl-5">
+            <li>
+              <b>Singly Linked List (Uni-directional)</b>
+              <ul class="pl-4">
+                <li>Begins with a pointer to the first node</li>
+                <li>Terminates with a null pointer</li>
+                <li>Only traversed in one direction</li>
+              </ul>
+            </li>
+            <li>
+              <b>Doubly Linked List (Bi-directional)</b>
+              <ul class="pl-4">
+                <li>Two "start-pointer" - first and last element</li>
+                <li>Each node has forward and backward pointer</li>
+                <li>Allows traversed in both forward and backward direction</li>
+              </ul>
+            </li>
+            <li>
+              <b>Circular Linked List</b>
+              <ul class="pl-4">
+                <li>
+                  <b>Circular, Singly linked list</b>
+                  <p>Pointer in the last node points back to first node</p>
+                </li>
+                <li>
+                  <b>Circular, Doubly linked list</b>
+                  <p>Forward pointer of the last node points to the first node and backward pointer of first node points to the last node</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p>
+            The simplest and most straightforward is a train. Train boxes are linked in a specific order so that they may be loaded, unloaded, transferred, dropped off, and picked up in the most efficient manner possible.
+          </p>
+        </div>
+        <div class="row mt-1">
+          <div class="col-md-8">
+            <span class="h5">Advantage</span>
+            <ul class="pl-5">
+              <li>Efficient insertion and removal of new elements</li>
+              <li>Less complex than restructuring an array</li>
+            </ul>
+            <span class="h5">Disadvantage</span>
+            <ul class="pl-5">
+              <li>Uses more memory than arrays</li>
+              <li>Inefficient to retrieve a specific element</li>
+              <li>Inefficient to traverse the list backward</li>
+            </ul>
+            <span class="h5">Application</span>
+            <ul class="pl-5">
+              <li>Best used when data must be added and removed in quick succession from unknown locations</li>
+              <li>Linked lists are typically used to create file systems, adjacency lists, ​and hash tables</li>
+            </ul>
+            <span class="h5">Time Complexity in big O notation</span>
+            <table class="table table-sm">
+              <tr>
+                <th>Algorithm</th>
+                <th>Average</th>
+                <th>Worst Case</th>
+              </tr>
+              <tr>
+                <td>Access</td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+              </tr>
+              <tr>
+                <td>Search</td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+              </tr>
+              <tr>
+                <td>Insert</td>
+                <td>O(1)</td>
+                <td>O(1)</td>
+              </tr>
+              <tr>
+                <td>Delete</td>
+                <td>O(1)</td>
+                <td>O(1)</td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-md-4">
+            <img src="./assets/3LinkedList.png" alt="Linked List" class="img-thumbnail"/>
           </div>
         </div>
       </div>
