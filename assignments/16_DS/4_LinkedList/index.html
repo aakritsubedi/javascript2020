@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning JavaScript in 2020</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./../../../css/style.css" />
+  </head>
+  <body>
+    <div class="js-banner"></div>
+    <div class="container mt-5">
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <h2>Linked List Implementation in JS</h2>
+          <p>
+            A linked list is a linear data structure, in which the elements are
+            not stored at contiguous memory locations. The elements in a linked
+            list are linked using pointers as shown in the below image:
+          </p>
+          <img
+            src="./assets/Linkedlist.png"
+            alt="Linked List"
+            class="img-thumbnail"
+          />
+          <p>
+            A linked list consists of nodes where each node contains a data
+            field and a reference(link) to the next node in the list.
+          </p>
+          <span class="h5">Why Linked List?</span>
+          <p>
+            Arrays can be used to store linear data of similar types, but arrays
+            have the following limitations.
+          </p>
+          <ul class="pl-5">
+            <li>
+              <b>The size of the arrays is fixed:</b> So we must know the upper
+              limit on the number of elements in advance. Also, generally, the
+              allocated memory is equal to the upper limit irrespective of the
+              usage.
+            </li>
+            <li>
+              Inserting a new element in an array of elements is expensive
+              because the room has to be created for the new elements and to
+              create room existing elements have to be shifted.
+            </li>
+          </ul>
+          <span class="h5">Representation</span>
+          <p>
+            A linked list is represented by a pointer to the first node of the
+            linked list. The first node is called the head. If the linked list
+            is empty, then the value of the head is NULL.
+          </p>
+          <p>
+            Each node in a list consists of at least two parts:
+          </p>
+          <ul class="pl-5">
+            <li>Data</li>
+            <li>Pointer (Or Reference) to the next node</li>
+          </ul>
+          <span class="h5">Types: </span>
+          <ul class="pl-5">
+            <div class="row mt-1">
+              <div class="col-md-8">
+                <li>
+                  <b>Singly Linked List</b>
+                  <p>
+                    A Singly Linked List (SLL) contains a pointer, typically
+                    called next pointer, to point the next node.
+                  </p>
+                  <ul class="pl-5">
+                    <li>Uni-directional</li>
+                    <li>Begins with a pointer to the first node</li>
+                    <li>Terminates with a null pointer</li>
+                    <li>Only traversed in one direction</li>
+                  </ul>
+                </li>
+              </div>
+              <div class="col-md-4">
+                <img
+                  src="./assets/Linkedlist.png"
+                  alt="Singly Linked List"
+                  class="img-thumbnail"
+                />
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-md-8">
+                <li>
+                  <b>Doubly Linked List</b>
+                  <p>
+                    A Doubly Linked List (DLL) contains an extra pointer,
+                    typically called previous pointer, together with next
+                    pointer and data which are there in singly linked list.
+                  </p>
+                  <ul class="pl-5">
+                    <li>Bi-directional</li>
+                    <li>Two "start-pointer" - first and last element</li>
+                    <li>Each node has forward and backward pointer</li>
+                    <li>Each node has forward and backward pointer</li>
+                  </ul>
+                  <span class="h6">Advantages over singly linked list</span>
+                  <ul class="pl-5">
+                    <li>
+                      A DLL can be traversed in both forward and backward
+                      direction.
+                    </li>
+                    <li>
+                      The delete operation in DLL is more efficient if pointer
+                      to the node to be deleted is given.
+                    </li>
+                    <li>Quickly insert a new node before a given node.</li>
+                  </ul>
+                  <span class="h6">Disadvantages over singly linked list</span>
+                  <ul class="pl-5">
+                    <li>
+                      Every node of DLL Require extra space for an previous
+                      pointer.
+                    </li>
+                    <li>
+                      All operations require an extra pointer previous to be
+                      maintained.
+                    </li>
+                  </ul>
+                </li>
+              </div>
+              <div class="col-md-4">
+                <img
+                  src="./assets/DLL.png"
+                  alt="Doubly Linked List"
+                  class="img-thumbnail"
+                />
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-md-8">
+                <li>
+                  <b>Circular Linked List</b>
+                  <p>
+                    Circular linked list is a linked list where all nodes are
+                    connected to form a circle. There is no NULL at the end. A
+                    circular linked list can be a singly circular linked list or
+                    doubly circular linked list.
+                  </p>
+                  <ul class="pl-5">
+                    <li>
+                      <b>Circular, Singly linked list</b>
+                      <p>Pointer in the last node points back to first node</p>
+                    </li>
+                    <li>
+                      <b>Circular, Doubly linked list</b>
+                      <p>
+                        Forward pointer of the last node points to the first
+                        node and backward pointer of first node points to the
+                        last node
+                      </p>
+                    </li>
+                  </ul>
+                  <span class="h6">Advantages of Circular Linked Lists:</span>
+                  <ul class="pl-5">
+                    <li>
+                      Any node can be a starting point. We can traverse the
+                      whole list by starting from any point. We just need to
+                      stop when the first visited node is visited again.
+                    </li>
+                    <li>
+                      Circular lists are useful in applications to repeatedly go
+                      around the list.
+                    </li>
+                    <li>
+                      Circular Doubly Linked Lists are used for implementation
+                      of advanced data structures like Fibonacci Heap.
+                    </li>
+                  </ul>
+                </li>
+              </div>
+              <div class="col-md-4">
+                <img
+                  src="./assets/CircularLinkeList.png"
+                  alt="Circular Linked List"
+                  class="img-thumbnail"
+                />
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <span class="h5">Singly Linked List Implementation using Array</span>
+          <span class="d-block h6 mt-2">Node</span>
+          <span class="code editor" id="node"></span>
+          <a href="./code/node.js">Download Code</a><br>
+          <span class="d-block h6 mt-2">Singly Linked List</span>
+          <span class="code editor" id="single-linked-list"></span>
+          <a href="./code/singleLinkedList.js">Download Code</a>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <span class="h4">Check for balanced parentheses</span>
+          <p>
+            <code>Problem statement: </code>
+            Write the <code>reverse</code> function to take a singly linked list and reverse it in place.
+          </p>
+          <b>Input: </b> a singly linked list<br />
+          <code>let LinkedList = 0->1->2->3-4</code><br />
+          <b>Output: </b> a reverse linked list <br />
+          <code>LinkedList = 4->3->2->1->0</code>
+          <span class="code-editor" id="reverse-list"></span>
+          <a href="./code/reverseList.js">Download Code</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer"></div>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
