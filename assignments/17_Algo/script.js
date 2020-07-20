@@ -1,6 +1,7 @@
 // List of all table of content 
 const tableOfContent = [
   { sn: 1, title: 'Factorial', github: '1_Factorial', demo: '1_Factorial' },
+  { sn: 2, title: 'Fibonacci Number', github: '2_FibonacciNo', demo: '2_FibonacciNo'}
 ]
 
 let getGithubLink = value => {
