@@ -3,7 +3,8 @@ const tableOfContent = [
   { sn: 1, title: 'Factorial', github: '1_Factorial', demo: '1_Factorial' },
   { sn: 2, title: 'Fibonacci Number', github: '2_FibonacciNo', demo: '2_FibonacciNo'},
   { sn: 3, title: 'Primality Test(Prime no. or not)', github:'3_Primality', demo: '3_Primality'},
-  { sn: 4, title: 'Euclidean algorithm, calculate GCD', github: '4_GCD', demo: '4_GCD'}
+  { sn: 4, title: 'Euclidean algorithm, calculate GCD', github: '4_GCD', demo: '4_GCD'},
+  { sn: 5, title: 'Least Common Factor, LCM', github: '5_LCM', demo:'5_LCM'}
 ]
 
 let getGithubLink = value => {
