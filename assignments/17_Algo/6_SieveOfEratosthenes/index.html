@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <title>Algorithm in JS</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./../../../css/style.css" />
+  </head>
+  <body>
+    <div class="js-banner"></div>
+    <div class="container mt-5">
+      <h2>Sieve of Eratosthenes</h2>
+      <p>
+        The Sieve of Eratosthenes is an algorithm for finding all prime numbers
+        up to some limit n.
+      </p>
+      <span class="d-block">How it works</span>
+      <ul class="pl-5">
+        <li>
+          Create a boolean array of n + 1 positions (to represent the numbers 0
+          through n)
+        </li>
+        <li>Set positions 0 and 1 to false, and the rest to true</li>
+        <li>Start at position p = 2 (the first prime number)</li>
+        <li>
+          Mark as false all the multiples of p (that is, positions 2 * p, 3 * p,
+          4 * p... until you reach the end of the array)
+        </li>
+        <li>
+          Find the first position greater than p that is true in the array. If
+          there is no such position, stop. Otherwise, let p equal this new
+          number (which is the next prime), and repeat from step 4
+        </li>
+      </ul>
+      <p>
+        When the algorithm terminates, the numbers remaining true in the array
+        are all the primes below n.
+      </p>
+      <b>Note: </b>
+      <p>
+        An improvement of this algorithm is, in step 4, start marking multiples
+        of p from p * p, and not from 2 * p. The reason why this works is
+        because, at that point, smaller multiples of p will have already been
+        marked false.
+      </p>
+      <span class="h4 mt-3 d-block"
+        >Finding all prime numbers up to some limit n.</span
+      >
+      <div class="row">
+        <div class="col-md-8">
+          <span class="code-editor" id="sieve-of-eratosthenes"></span>
+        </div>
+        <div class="col-md-4">
+          <span class="d-block h5">Example</span>
+          <img src="./sieveOfEratosthenes.gif" alt="Sieve_of_Eratosthenes" />
+        </div>
+      </div>
+      <span class="d-block h5 mt-3">Complexity</span>
+      <p>The algorithm has a complexity of <code>O(n log(log n))</code>.</p>
+      <span class="h4 d-block mt-3">Reference</span>
+      <a
+        href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes"
+        target="_blank"
+        >Wikipedia</a
+      >
+    </div>
+    <div class="footer"></div>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
