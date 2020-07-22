@@ -5,7 +5,8 @@ const tableOfContent = [
   { sn: 3, title: 'Primality Test(Prime no. or not)', github:'3_Primality', demo: '3_Primality'},
   { sn: 4, title: 'Euclidean algorithm, calculate GCD', github: '4_GCD', demo: '4_GCD'},
   { sn: 5, title: 'Least Common Factor, LCM', github: '5_LCM', demo:'5_LCM'},
-  { sn: 6, title: 'Sieve of Eratosthenes', github: '6_SieveOfEratosthenes', demo: '6_SieveOfEratosthenes'}
+  { sn: 6, title: 'Sieve of Eratosthenes', github: '6_SieveOfEratosthenes', demo: '6_SieveOfEratosthenes'},
+  { sn: 7, title: '7_PascalTriangle', github: '7_PascalTriangle', demo: '7_PascalTriangle' }
 ]
 
 let getGithubLink = value => {

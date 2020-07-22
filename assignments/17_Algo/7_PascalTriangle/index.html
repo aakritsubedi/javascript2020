@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <title>Algorithm in JS</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./../../../css/style.css" />
+  </head>
+  <body>
+    <div class="js-banner"></div>
+    <div class="container mt-5">
+      <h2>Pascal Triangle</h2>
+      <p>
+        In mathematics, Pascal's triangle is a triangular array of the binomial coefficients.
+      </p>
+      <p>
+        The rows of Pascal's triangle are conventionally enumerated starting with row n = 0 at the top (the 0th row). The entries in each row are numbered from the left beginning with k = 0 and are usually staggered relative to the numbers in the adjacent rows. The triangle may be constructed in the following manner: In row 0 (the topmost row), there is a unique nonzero entry 1. Each entry of each subsequent row is constructed by adding the number above and to the left with the number above and to the right, treating blank entries as 0. For example, the initial number in the first (or any other) row is 1 (the sum of 0 and 1), whereas the numbers 1 and 3 in the third row are added to produce the number 4 in the fourth row.
+      </p>
+      <span class="d-block">Formula</span>
+      <ul class="pl-5">
+        <li>
+        The entry in the nth row and kth column of Pascal's triangle is denoted 
+        <img src='./assets/n_k.svg'/>.For example, the unique nonzero entry in the topmost row is 
+        <img src="./assets/0_0.svg" />
+        </li>
+        <li>
+          With this notation, the construction of the previous paragraph may be written as follows:
+          <br>
+          <img src="./assets/notation1.svg" alt="Notation" />
+        </li>
+        <li>
+          for any non-negative integer n and any integer k between 0 and n, inclusive.
+          <br>
+          <img src="./assets/non_negative2.svg" alt="Non Negative">
+        </li>
+      </ul>
+      <span class="d-block h5">Calculating triangle entries in O(n) time</span>
+      <p>
+        We know that i-th entry in a line number lineNumber is Binomial Coefficient <code>C(lineNumber, i)</code> and all lines start with value 1. The idea is to calculate <code>C(lineNumber, i) using C(lineNumber, i-1)</code>. It can be calculated in <b>O(1)</b> time using the following:
+      </p>
+      <div style="line-height: 30px;">
+        <code class="d-block">
+          C(lineNumber, i)   = lineNumber! / ((lineNumber - i)! * i!)
+        </code>
+        <code class="d-block">
+          C(lineNumber, i - 1) = lineNumber! / ((lineNumber - i + 1)! * (i - 1)!)
+        </code>
+        <p>
+          We can derive following expression from above two expressions:
+          <code class="d-block">
+            C(lineNumber, i) = C(lineNumber, i - 1) * (lineNumber - i + 1) / i
+          </code>
+        </p>
+        <p>So <code>C(lineNumber, i)</code> can be calculated from <code>C(lineNumber, i - 1)</code> in <b>O(1)</b> time.</p>
+      </div>
+      <span class="h4 mt-3 d-block">Pascal Triangle</span>
+      <div class="row">
+        <div class="col-md-9">
+          <span class="code-editor" id="pascal-triangle"></span>
+        </div>
+        <div class="col-md-3">
+          <img src="./pascalTriangle.gif" alt="Sieve_of_Eratosthenes" />
+        </div>
+      </div>
+      <span class="h5">using recursive approach</span>
+      <span class="code-editor" id="pascal-triangle-recursive"></span>
+      <span class="h4 d-block mt-3">Reference</span>
+      <ul class="pl-4">
+        <li><a href="https://en.wikipedia.org/wiki/Pascal%27s_triangle" target="_blank">Wikipedia</a></li>
+        <li><a href="https://www.geeksforgeeks.org/pascal-triangle/" target="_blank">GeeksForGeeks</a></li>
+      </ul>
+    </div>
+    <div class="footer"></div>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
